@@ -8,4 +8,4 @@ jobs:
     steps:
       - run: echo "hello event"
       - name: Log input parameters
-        run: echo "Image name [${{ github.event.inputs.application }}] and version [${{ github.event.inputs.version }}] and issue [${{ github.event.inputs.issue }}]."
+        run: echo "Image name [${{ github.event.client_payload.application }}] and version [${{ github.event.client_payload.version }}] and issue [${{ github.event.client_payload.issue }}]."
