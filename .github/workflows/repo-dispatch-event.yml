@@ -7,3 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello event"
+      - name: Log input parameters
+        run: echo "Image name [${{ github.event.inputs.application }}] and version [${{ github.event.inputs.version }}]."
