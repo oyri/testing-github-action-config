@@ -1,0 +1,9 @@
+name: Repository Dispatch
+on:
+  repository_dispatch:
+    types: [update-oyri-version]
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello event"
